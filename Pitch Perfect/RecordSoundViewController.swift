@@ -84,15 +84,19 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
         
         // if it is recording, pause the recording
         if (audioRecorder.recording) {
+            
             audioRecorder.pause()
             recordingLabel.text = "Recording paused"
+            pauseRecordingButton.setTitle("Resume", forState: UIControlState.Normal)
             println("Recording paused")
         } else {
+            
             // resume recording
             var audioSession = AVAudioSession.sharedInstance()
             audioSession.setActive(true, error: nil)
             audioRecorder.record()
             recordingLabel.text = "Recording..."
+            pauseRecordingButton.setTitle("| |", forState: UIControlState.Normal)
             println("Recording resumed")
         }
     }
