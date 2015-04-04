@@ -106,6 +106,9 @@ class PlaySoundsViewController: UIViewController {
         let reverbPreset = preset
         reverbEffect.loadFactoryPreset(reverbPreset)
         
+        // reverb setting
+        reverbEffect.wetDryMix = 50
+        
         // attach the nodes before connecting
         audioEngine.attachNode(audioPlayerNode)
         audioEngine.attachNode(reverbEffect)

@@ -16,8 +16,8 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var pauseRecordingButton: UIButton!
     
-    var audioRecorder:AVAudioRecorder!
-    var recordedAudio:RecordedAudio!
+    var audioRecorder: AVAudioRecorder!
+    var recordedAudio: RecordedAudio!
     
     
     override func viewDidLoad() {
